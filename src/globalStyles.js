@@ -50,6 +50,15 @@ const styles = {
       textAlign: 'center',
       lineHeight: 1.35,
     },
+    '.placeholder': {
+      backgroundColor: '#eeeeee',
+      height: 10,
+      marginBottom: 10,
+      '@media (min-width: 860px)': {
+        height: 15,
+        marginBottom: 15,
+      },
+    },
   },
 };
 

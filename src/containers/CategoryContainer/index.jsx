@@ -7,10 +7,12 @@ import { withRouter } from 'react-router';
 import BaseLayout from '../../components/BaseLayout';
 import ArticleList from '../../components/ArticleList';
 import fetchFeed from '../../actions/feed';
+import NotFound from '../NotFoundContainer';
 
 type Props = {
   feed: Array<Object>,
   fetchFeed: Function,
+  isLoading: boolean,
 };
 
 const getCategoryArticle = (feed, category) => {
@@ -35,13 +37,18 @@ class CategoryContainer extends React.PureComponent<Props> {
   }
 
   render() {
-    const { feed, match } = this.props;
+    const { feed, match, isLoading } = this.props;
     const { slug } = match.params;
+
     const posts = getCategoryArticle(feed, slug);
+
+    if (posts.length === 0) {
+      return <NotFound />;
+    }
 
     return (
       <BaseLayout>
-        <ArticleList data={posts} />
+        <ArticleList data={posts} isLoading={isLoading} />
       </BaseLayout>
     );
   }

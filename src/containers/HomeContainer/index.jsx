@@ -9,6 +9,7 @@ import fetchFeed from '../../actions/feed';
 type Props = {
   feed: Array<Object>,
   fetchFeed: Function,
+  isLoading: boolean,
 };
 
 class HomeContainer extends React.PureComponent<Props> {
@@ -21,11 +22,11 @@ class HomeContainer extends React.PureComponent<Props> {
   }
 
   render() {
-    const { feed } = this.props;
+    const { feed, isLoading } = this.props;
 
     return (
       <BaseLayout>
-        <ArticleList data={feed} />
+        <ArticleList data={feed} isLoading={isLoading} />
       </BaseLayout>
     );
   }

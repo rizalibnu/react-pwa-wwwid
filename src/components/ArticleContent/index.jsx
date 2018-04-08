@@ -4,9 +4,12 @@ import injectSheet from 'react-jss';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
+import NotFound from '../NotFound';
+
 type Props = {
   classes: Object,
   data: Object,
+  isLoading: boolean,
 };
 
 type State = {};
@@ -130,35 +133,47 @@ const styles = theme => ({
 
 class ArticleContent extends React.PureComponent<Props, State> {
   render() {
-    const { classes, data } = this.props;
+    const { classes, data, isLoading } = this.props;
 
-    return (
-      <React.Fragment>
+    if (isLoading) {
+      return (
         <div className={classes.wrapper}>
-          <div className={classes.info}>
-            <span>
-              {data.author}
-            </span>
-            <span> · </span>
-            <span>
-              {data.pubDate}
-            </span>
-          </div>
-          <h1 className={classes.title}>
-            {data.title}
-          </h1>
           <div className={classes.content}>
-            {ReactHtmlParser(data.description)}
-          </div>
-          <div className={classes.tag}>
-            {data.categories.map((category, index) => (
-              <Link key={`${category}-${index}`} to={`/categories/${category.slug}`} className={classes.tagLabel}>
-                {category.title}
-              </Link>
-            ))}
+            <div className="placeholder" style={{ width: '100%' }} />
+            <div className="placeholder" style={{ width: '100%' }} />
+            <div className="placeholder" style={{ width: '50%' }} />
           </div>
         </div>
-      </React.Fragment>
+      );
+    } else if (typeof data === 'undefined') {
+      return <NotFound />;
+    }
+
+    return (
+      <div className={classes.wrapper}>
+        <div className={classes.info}>
+          <span>
+            {data.author}
+          </span>
+          <span> · </span>
+          <span>
+            {data.pubDate}
+          </span>
+        </div>
+        <h1 className={classes.title}>
+          {data.title}
+        </h1>
+        <div className={classes.content}>
+          {ReactHtmlParser(data.description)}
+        </div>
+        <div className={classes.tag}>
+          {data.categories.map((category, index) => (
+            <Link key={`${category}-${index}`} to={`/categories/${category.slug}`} className={classes.tagLabel}>
+              {category.title}
+            </Link>
+          ))}
+        </div>
+      </div>
     );
   }
 }

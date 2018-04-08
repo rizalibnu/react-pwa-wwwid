@@ -12,6 +12,7 @@ type Props = {
   feed: Array<Object>,
   fetchFeed: Function,
   match: Object,
+  isLoading: boolean,
 };
 
 class ArticleContainer extends React.PureComponent<Props> {
@@ -24,15 +25,13 @@ class ArticleContainer extends React.PureComponent<Props> {
   }
 
   render() {
-    const { feed, match } = this.props;
+    const { feed, match, isLoading } = this.props;
     const { slug } = match.params;
     const post = feed.find(item => item.slug === slug);
 
-    if (typeof post === 'undefined') return null;
-
     return (
       <BaseLayout>
-        <ArticleContent data={post} />
+        <ArticleContent data={post} isLoading={isLoading} />
       </BaseLayout>
     );
   }

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 type Props = {
   classes: Object,
   data: Array<Object>,
+  isLoading: boolean,
 };
 
 type State = {};
@@ -78,7 +79,32 @@ const styles = theme => ({
 
 class ArticleList extends React.PureComponent<Props, State> {
   render() {
-    const { classes, data } = this.props;
+    const { classes, data, isLoading } = this.props;
+    const placeholderItems = Array.from(Array(5).keys());
+
+    if (isLoading) {
+      return (
+        <div className={classes.wrapper}>
+          {placeholderItems.map(index => (
+            <div key={index} className={classes.item}>
+              <div className={classes.imageWrapper}>
+                <div className={classes.image} />
+              </div>
+              <div className={classes.bodyWrapper}>
+                <div className="placeholder" style={{ width: '100%' }} />
+                <div className={classes.excerpt}>
+                  <div className="placeholder" style={{ width: '100%' }} />
+                  <div className="placeholder" style={{ width: '70%' }} />
+                </div>
+                <div className={classes.info}>
+                  <div className="placeholder" style={{ width: '50%' }} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )
+    }
 
     const item = (
       <React.Fragment>
@@ -120,11 +146,9 @@ class ArticleList extends React.PureComponent<Props, State> {
     );
 
     return (
-      <React.Fragment>
-        <div className={classes.wrapper}>
-          {item}
-        </div>
-      </React.Fragment>
+      <div className={classes.wrapper}>
+        {item}
+      </div>
     );
   }
 }

@@ -2,6 +2,7 @@
 import * as React from 'react';
 
 import BaseLayout from '../../components/BaseLayout';
+import NotFound from '../../components/NotFound';
 
 type Props = {};
 
@@ -10,7 +11,7 @@ class NotFoundContainer extends React.PureComponent<Props> {
   render() {
     return (
       <BaseLayout>
-        <div>Halaman tidak ditemukan</div>
+        <NotFound />
       </BaseLayout>
     );
   }
