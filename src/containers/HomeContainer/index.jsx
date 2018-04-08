@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import BaseLayout from '../../components/BaseLayout';
 import ArticleList from '../../components/ArticleList';
+import HomeIntro from '../../components/HomeIntro';
 import fetchFeed from '../../actions/feed';
 
 type Props = {
@@ -26,6 +27,7 @@ class HomeContainer extends React.PureComponent<Props> {
 
     return (
       <BaseLayout>
+        <HomeIntro />
         <ArticleList data={feed} isLoading={isLoading} />
       </BaseLayout>
     );
