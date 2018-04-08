@@ -155,7 +155,7 @@ class BaseLayout extends React.PureComponent<Props, State> {
                 </Link>
               </div>
               <div className={classes.rightHeader}>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/rizalibnu/react-pwawwwid" target="_blank" rel="noopener noreferrer">
                   <span className={classes.github}>
                     <svg className={classes.githubIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <title>github logo</title>
