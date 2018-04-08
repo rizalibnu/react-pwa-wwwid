@@ -66,6 +66,14 @@ const getAllCategories = (params) => {
   return objects;
 };
 
+const getCloudinaryImage = (img) => {
+  const widthSize = window.screen.width >= 860 ? 332 : window.screen.width >= 640 && window.screen.width < 860 ? 250 : 96;
+  const heightSize = window.screen.width >= 860 ? 186 : window.screen.width >= 640 && window.screen.width < 860 ? 140 : 54;
+  const fetchUrl = `https://res.cloudinary.com/rizalibnu/image/fetch/c_fill,g_auto:face,h_${heightSize},w_${widthSize},fl_force_strip.progressive/f_webp/`;
+
+  return fetchUrl + img;
+};
+
 export default function feedReducer(state = defaultState, action = {}) {
   switch (action.type) {
     case 'FETCH_FEED': {
@@ -77,7 +85,7 @@ export default function feedReducer(state = defaultState, action = {}) {
           title: item.title,
           pubDate: Moment(Moment(item.pubDate).format('YYYYMMDD'), 'YYYYMMDD').fromNow(),
           author: item.author,
-          thumbnail: item.thumbnail,
+          thumbnail: getCloudinaryImage(item.thumbnail),
           categories: item.categories.map((category, index) => ({
             id: index,
             slug: category,
