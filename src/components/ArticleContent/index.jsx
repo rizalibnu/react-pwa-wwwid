@@ -2,6 +2,7 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 import ReactHtmlParser from 'react-html-parser';
+import { Link } from 'react-router-dom';
 
 type Props = {
   classes: Object,
@@ -106,6 +107,25 @@ const styles = theme => ({
       },
     },
   },
+  tag: {
+    margin: [[50, 0]],
+  },
+  tagLabel: {
+    color: theme.baseColor,
+    padding: 10,
+    backgroundColor: '#eeeeee',
+    borderRadius: 4,
+    marginRight: 10,
+    marginBottom: 10,
+    display: 'inline-block',
+    fontSize: 14,
+    '&:last-child': {
+      marginRight: 0,
+    },
+    '&:hover': {
+      backgroundColor: '#dddddd',
+    },
+  },
 });
 
 class ArticleContent extends React.PureComponent<Props, State> {
@@ -129,6 +149,13 @@ class ArticleContent extends React.PureComponent<Props, State> {
           </h1>
           <div className={classes.content}>
             {ReactHtmlParser(data.description)}
+          </div>
+          <div className={classes.tag}>
+            {data.categories.map((category, index) => (
+              <Link key={`${category}-${index}`} to={`/categories/${category.slug}`} className={classes.tagLabel}>
+                {category.title}
+              </Link>
+            ))}
           </div>
         </div>
       </React.Fragment>
