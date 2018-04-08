@@ -8,7 +8,7 @@ type Props = {
 
 const styles = theme => ({
   wrapper: {
-    height: window.innerHeight - (81 + 65),
+    height: window.innerHeight - 220,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

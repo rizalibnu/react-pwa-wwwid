@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 import BaseLayout from '../../components/BaseLayout';
 import ArticleList from '../../components/ArticleList';
 import fetchFeed from '../../actions/feed';
-import NotFound from '../NotFoundContainer';
+import NotFound from '../../components/NotFound';
 
 type Props = {
   feed: Array<Object>,
@@ -42,13 +42,10 @@ class CategoryContainer extends React.PureComponent<Props> {
 
     const posts = getCategoryArticle(feed, slug);
 
-    if (posts.length === 0) {
-      return <NotFound />;
-    }
-
     return (
       <BaseLayout>
         <ArticleList data={posts} isLoading={isLoading} />
+        {(posts.length === 0 && !isLoading) && <NotFound />}
       </BaseLayout>
     );
   }

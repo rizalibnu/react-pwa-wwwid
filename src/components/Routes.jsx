@@ -3,17 +3,9 @@ import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import loadable from 'loadable-components';
 
-const Loading = () => (
-  <div>
-    <div>Loading...</div>
-  </div>
-);
+const Loading = () => null;
 
-const HasErrored = () => (
-  <div>
-    <div>Error...</div>
-  </div>
-);
+const HasErrored = () => <div>Error...</div>;
 
 export const Home = loadable(() => import('../containers/HomeContainer'), {
   LoadingComponent: Loading,
