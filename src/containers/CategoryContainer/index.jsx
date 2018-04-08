@@ -16,7 +16,12 @@ type Props = {
 const getCategoryArticle = (feed, category) => {
   const data = feed;
   return data.filter(item => {
-    return item.categories.includes(category)
+    let slug = [];
+    /* eslint array-callback-return: 0 */
+    item.categories.map(category => {
+      slug.push(category.slug);
+    })
+    return slug.includes(category);
   })
 }
 

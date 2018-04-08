@@ -77,7 +77,11 @@ export default function feedReducer(state = defaultState, action = {}) {
           pubDate: Moment(Moment(item.pubDate).format('YYYYMMDD'), 'YYYYMMDD').fromNow(),
           author: item.author,
           thumbnail: item.thumbnail,
-          categories: item.categories,
+          categories: item.categories.map((category, index) => ({
+            id: index,
+            slug: category,
+            title: slugToTitle(category),
+          })),
           excerpt: getExcerpt(item.description, 140),
           description: item.description,
         })),
