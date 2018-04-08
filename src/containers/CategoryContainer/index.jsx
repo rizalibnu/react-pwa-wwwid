@@ -1,6 +1,8 @@
 // @flow
 import * as React from 'react';
 import { connect } from 'react-redux';
+import compose from 'recompose/compose';
+import { withRouter } from 'react-router';
 
 import BaseLayout from '../../components/BaseLayout';
 import ArticleList from '../../components/ArticleList';
@@ -11,7 +13,14 @@ type Props = {
   fetchFeed: Function,
 };
 
-class HomeContainer extends React.PureComponent<Props> {
+const getCategoryArticle = (feed, category) => {
+  const data = feed;
+  return data.filter(item => {
+    return item.categories.includes(category)
+  })
+}
+
+class CategoryContainer extends React.PureComponent<Props> {
   static defaultProps = {
     feed: [],
   }
@@ -21,11 +30,13 @@ class HomeContainer extends React.PureComponent<Props> {
   }
 
   render() {
-    const { feed } = this.props;
+    const { feed, match } = this.props;
+    const { slug } = match.params;
+    const posts = getCategoryArticle(feed, slug);
 
     return (
       <BaseLayout>
-        <ArticleList data={feed} />
+        <ArticleList data={posts} />
       </BaseLayout>
     );
   }
@@ -40,4 +51,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchFeed })(HomeContainer);
+export default compose(
+  withRouter,
+  connect(mapStateToProps, { fetchFeed }),
+)(CategoryContainer);

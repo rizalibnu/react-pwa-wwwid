@@ -15,6 +15,10 @@ type Props = {
 };
 
 class ArticleContainer extends React.PureComponent<Props> {
+  static defaultProps = {
+    feed: [],
+  }
+
   componentDidMount() {
     this.props.fetchFeed();
   }

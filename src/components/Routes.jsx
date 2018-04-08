@@ -25,6 +25,11 @@ export const Article = loadable(() => import('../containers/ArticleContainer'), 
   ErrorComponent: HasErrored,
 });
 
+export const Category = loadable(() => import('../containers/CategoryContainer'), {
+  LoadingComponent: Loading,
+  ErrorComponent: HasErrored,
+});
+
 export const NotFound = loadable(() => import('../containers/NotFoundContainer'), {
   LoadingComponent: Loading,
   ErrorComponent: HasErrored,
@@ -34,6 +39,7 @@ const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route path="/articles/:slug" component={Article} />
+    <Route path="/categories/:slug" component={Category} />
     <Route path="*" component={NotFound} />
   </Switch>
 );
