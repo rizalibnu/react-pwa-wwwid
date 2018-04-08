@@ -1,4 +1,5 @@
 import Moment from 'moment';
+import 'moment/locale/id';
 
 Moment.locale('id');
 
