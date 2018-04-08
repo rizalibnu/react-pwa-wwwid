@@ -90,6 +90,9 @@ const styles = theme => ({
     '@media (min-width: 860px)': {
       padding: 0,
     },
+    '& a': {
+      color: theme.textMuted,
+    },
   },
 });
 
