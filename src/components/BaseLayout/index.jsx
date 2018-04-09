@@ -192,11 +192,11 @@ class BaseLayout extends React.PureComponent<Props, State> {
               <div className={classes.headerWrapper}>
                 <div className={classes.leftHeader}>
                   <button className={classes.menuButton} onClick={this.menuButtonClick}>
-                    <svg className={classes.menuIcon}  id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 101">
+                    <svg className={classes.menuIcon} id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 101">
                       <title>hamburger menu</title>
-                      <line x1="5" y1="5" x2="125" y2="5" fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
-                      <line x1="5" y1="50.5" x2="125" y2="50.5" fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
-                      <line x1="5" y1="96" x2="125" y2="96" fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+                      <line x1="5" y1="5" x2="125" y2="5" fill="none" stroke="#171717" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />
+                      <line x1="5" y1="50.5" x2="125" y2="50.5" fill="none" stroke="#171717" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />
+                      <line x1="5" y1="96" x2="125" y2="96" fill="none" stroke="#171717" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />
                     </svg>
                   </button>
                   <Link to="/">
