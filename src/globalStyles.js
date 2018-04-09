@@ -9,6 +9,9 @@ const styles = {
       padding: 0,
       fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
     },
+    ':focus': {
+      outline: 0,
+    },
     a: {
       textDecoration: 'none',
     },

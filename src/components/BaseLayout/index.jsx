@@ -41,7 +41,6 @@ const styles = theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 65,
-    padding: [[0, 18]],
   },
   logo: {
     width: 45,
@@ -51,8 +50,7 @@ const styles = theme => ({
     border: 0,
     backgroundColor: 'transparent',
     cursor: 'pointer',
-    padding: 0,
-    marginRight: 10,
+    padding: [[0, 18]],
   },
   menuIcon: {
     width: 22,
@@ -67,7 +65,7 @@ const styles = theme => ({
   },
   github: {
     display: 'flex',
-    padding: [[15, 0, 15, 0]],
+    padding: [[15, 18]],
     flexGrow: 1,
     textAlign: 'center',
     maxHeight: 50,
@@ -196,7 +194,7 @@ class BaseLayout extends React.PureComponent<Props, State> {
                   <button className={classes.menuButton} onClick={this.menuButtonClick}>
                     <svg className={classes.menuIcon} viewBox="0 0 24 24" id="icon-menu" width="100%" height="100%">
                       <g fill="#171717">
-                        <title>react logo</title>
+                        <title>icon menu</title>
                         <path d="M21.41 18.18a.59.59 0 0 1 0 1.17H2.6a.59.59 0 0 1 0-1.17h18.8zm0-6.6a.59.59 0 0 1 0 1.18H2.6a.59.59 0 0 1 0-1.17h18.8zM2.6 6.19a.59.59 0 0 1 0-1.18h18.8a.59.59 0 0 1 0 1.18H2.6z" />
                       </g>
                     </svg>
