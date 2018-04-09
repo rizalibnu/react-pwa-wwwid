@@ -103,7 +103,7 @@ class ArticleList extends React.PureComponent<Props, State> {
             </div>
           ))}
         </div>
-      )
+      );
     }
 
     const item = (

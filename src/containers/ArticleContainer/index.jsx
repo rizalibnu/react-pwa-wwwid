@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import BaseLayout from '../../components/BaseLayout';
 import ArticleContent from '../../components/ArticleContent';
 import fetchFeed from '../../actions/feed';
+import { host } from '../../utils/helpers';
 
 type Props = {
   feed: Array<Object>,
@@ -30,7 +31,14 @@ class ArticleContainer extends React.PureComponent<Props> {
     const post = feed.find(item => item.slug === slug);
 
     return (
-      <BaseLayout>
+      <BaseLayout
+        title={`React PWA WWWID - ${post && post.title}`}
+        description={post && post.excerpt}
+        canonical={`${host}/articles/${slug}`}
+        image={post && post.thumbnail}
+        pubDateISO={post && post.pubDateISO}
+        isArticle
+      >
         <ArticleContent data={post} isLoading={isLoading} />
       </BaseLayout>
     );

@@ -167,8 +167,8 @@ class ArticleContent extends React.PureComponent<Props, State> {
           {ReactHtmlParser(data.description)}
         </div>
         <div className={classes.tag}>
-          {data.categories.map((category, index) => (
-            <Link key={`${category}-${index}`} to={`/categories/${category.slug}`} className={classes.tagLabel}>
+          {data.categories.map(category => (
+            <Link key={category.slug} to={`/categories/${category.slug}`} className={classes.tagLabel}>
               {category.title}
             </Link>
           ))}

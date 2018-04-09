@@ -8,24 +8,26 @@ import BaseLayout from '../../components/BaseLayout';
 import ArticleList from '../../components/ArticleList';
 import fetchFeed from '../../actions/feed';
 import NotFound from '../../components/NotFound';
+import { host, slugToTitle } from '../../utils/helpers';
 
 type Props = {
   feed: Array<Object>,
   fetchFeed: Function,
   isLoading: boolean,
+  match: Object,
 };
 
 const getCategoryArticle = (feed, category) => {
   const data = feed;
-  return data.filter(item => {
-    let slug = [];
+  return data.filter((item) => {
+    const slug = [];
     /* eslint array-callback-return: 0 */
-    item.categories.map(category => {
-      slug.push(category.slug);
-    })
+    item.categories.map((cat) => {
+      slug.push(cat.slug);
+    });
     return slug.includes(category);
-  })
-}
+  });
+};
 
 class CategoryContainer extends React.PureComponent<Props> {
   static defaultProps = {
@@ -43,7 +45,10 @@ class CategoryContainer extends React.PureComponent<Props> {
     const posts = getCategoryArticle(feed, slug);
 
     return (
-      <BaseLayout>
+      <BaseLayout
+        title={`React PWA WWWID - ${slugToTitle(slug)}`}
+        canonical={`${host}/categories/${slug}`}
+      >
         <ArticleList data={posts} isLoading={isLoading} />
         {(posts.length === 0 && !isLoading) && <NotFound />}
       </BaseLayout>
