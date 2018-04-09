@@ -6,7 +6,7 @@ type Props = {
   classes: Object,
 };
 
-const styles = theme => ({
+const styles = {
   wrapper: {
     height: window.innerHeight - 220,
     display: 'flex',
@@ -20,7 +20,7 @@ const styles = theme => ({
     display: 'block',
     marginBottom: 20,
   },
-});
+};
 
 class NotFound extends React.PureComponent<Props> {
   render() {
