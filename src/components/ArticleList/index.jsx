@@ -2,6 +2,7 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
+import { Lazy } from 'react-lazy';
 
 type Props = {
   classes: Object,
@@ -112,13 +113,13 @@ class ArticleList extends React.PureComponent<Props, State> {
           <div key={post.id} className={classes.item}>
             <div className={classes.imageWrapper}>
               <Link to={`/articles/${post.slug}`}>
-                <img
-                  width={96}
-                  height={54}
-                  src={post.thumbnail}
-                  alt={post.title}
-                  className={classes.image}
-                />
+                <Lazy ltIE9 className={classes.image}>
+                  <img
+                    src={post.thumbnail}
+                    alt={post.title}
+                    className={classes.image}
+                  />
+                </Lazy>
               </Link>
             </div>
             <div className={classes.bodyWrapper}>
