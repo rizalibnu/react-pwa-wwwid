@@ -53,8 +53,8 @@ const styles = theme => ({
     padding: [[0, 18]],
   },
   menuIcon: {
-    width: 22,
-    height: 22,
+    width: 20,
+    height: 20,
   },
   leftHeader: {
     display: 'flex',
@@ -192,11 +192,11 @@ class BaseLayout extends React.PureComponent<Props, State> {
               <div className={classes.headerWrapper}>
                 <div className={classes.leftHeader}>
                   <button className={classes.menuButton} onClick={this.menuButtonClick}>
-                    <svg className={classes.menuIcon} viewBox="0 0 24 24" id="icon-menu" width="100%" height="100%">
-                      <g fill="#171717">
-                        <title>icon menu</title>
-                        <path d="M21.41 18.18a.59.59 0 0 1 0 1.17H2.6a.59.59 0 0 1 0-1.17h18.8zm0-6.6a.59.59 0 0 1 0 1.18H2.6a.59.59 0 0 1 0-1.17h18.8zM2.6 6.19a.59.59 0 0 1 0-1.18h18.8a.59.59 0 0 1 0 1.18H2.6z" />
-                      </g>
+                    <svg className={classes.menuIcon}  id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 101">
+                      <title>hamburger menu</title>
+                      <line x1="5" y1="5" x2="125" y2="5" fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+                      <line x1="5" y1="50.5" x2="125" y2="50.5" fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+                      <line x1="5" y1="96" x2="125" y2="96" fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
                     </svg>
                   </button>
                   <Link to="/">
