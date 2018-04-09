@@ -80,7 +80,7 @@ const styles = theme => ({
 class ArticleList extends React.PureComponent<Props, State> {
   render() {
     const { classes, data, isLoading } = this.props;
-    const placeholderItems = Array.from(Array(5).keys());
+    const placeholderItems = Array.from(Array(3).keys());
 
     if (isLoading) {
       return (
