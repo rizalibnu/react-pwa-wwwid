@@ -2,10 +2,10 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
-import Sidebar from 'react-sidebar';
 import { Helmet } from 'react-helmet';
 
-import SidebarContent from '../SidebarContent';
+import Sidebar from '../Sidebar';
+import SidebarContent from '../Sidebar/SidebarContent';
 import { host } from '../../utils/helpers';
 
 type Props = {
