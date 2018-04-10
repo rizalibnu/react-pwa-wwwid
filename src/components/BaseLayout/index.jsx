@@ -16,7 +16,7 @@ type Props = {
   keywords: string,
   canonical: string,
   image: string,
-  pubDateISO: string,
+  pubDate: string,
   isArticle: boolean,
 };
 
@@ -110,7 +110,7 @@ class BaseLayout extends React.PureComponent<Props, State> {
     keywords: 'react, pwa, wwwid, pwa indonesia',
     canonical: host,
     image: `${host}/assets/logo.png`,
-    pubDateISO: '',
+    pubDate: '',
     isArticle: false,
   }
 
@@ -143,7 +143,7 @@ class BaseLayout extends React.PureComponent<Props, State> {
       keywords,
       canonical,
       image,
-      pubDateISO,
+      pubDate,
       isArticle,
     } = this.props;
 
@@ -177,8 +177,8 @@ class BaseLayout extends React.PureComponent<Props, State> {
           <meta property="og:image" content={image} />
           <meta property="og:description" content={description} />
           <meta property="og:site_name" content="React PWA WWWID" />
-          {isArticle && <meta property="article:published_time" content={pubDateISO} />}
-          {isArticle && <meta property="article:modified_time" content={pubDateISO} />}
+          {isArticle && <meta property="article:published_time" content={pubDate} />}
+          {isArticle && <meta property="article:modified_time" content={pubDate} />}
           <link rel="canonical" href={canonical} />
         </Helmet>
         <Sidebar

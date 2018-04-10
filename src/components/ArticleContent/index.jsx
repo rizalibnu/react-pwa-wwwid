@@ -3,6 +3,8 @@ import * as React from 'react';
 import injectSheet from 'react-jss';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
+import Moment from 'moment';
+import 'moment/locale/id';
 
 import NotFound from '../NotFound';
 
@@ -149,6 +151,8 @@ class ArticleContent extends React.PureComponent<Props, State> {
       return <NotFound />;
     }
 
+    Moment.locale('id');
+
     return (
       <div className={classes.wrapper}>
         <div className={classes.info}>
@@ -157,7 +161,7 @@ class ArticleContent extends React.PureComponent<Props, State> {
           </span>
           <span> · </span>
           <span>
-            {data.pubDate}
+            {Moment(Moment(data.pubDate).format('YYYYMMDD'), 'YYYYMMDD').fromNow()}
           </span>
         </div>
         <h1 className={classes.title}>

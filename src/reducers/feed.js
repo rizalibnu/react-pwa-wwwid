@@ -1,6 +1,3 @@
-import Moment from 'moment';
-import 'moment/locale/id';
-
 import {
   getId,
   titleToSlug,
@@ -9,8 +6,6 @@ import {
   getCloudinaryImage,
   getAllCategories,
 } from '../utils/helpers';
-
-Moment.locale('id');
 
 const defaultState = {
   feed: [],
@@ -25,8 +20,7 @@ export default function feedReducer(state = defaultState, action = {}) {
           id: getId(item.guid),
           slug: titleToSlug(item.title),
           title: item.title,
-          pubDateISO: item.pubDate,
-          pubDate: Moment(Moment(item.pubDate).format('YYYYMMDD'), 'YYYYMMDD').fromNow(),
+          pubDate: item.pubDate,
           author: item.author,
           thumbnail: getCloudinaryImage(item.thumbnail),
           categories: item.categories.map((category, index) => ({

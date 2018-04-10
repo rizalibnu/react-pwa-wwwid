@@ -36,7 +36,7 @@ class ArticleContainer extends React.PureComponent<Props> {
         description={post && post.excerpt}
         canonical={`${host}/articles/${slug}`}
         image={post && post.thumbnail}
-        pubDateISO={post && post.pubDateISO}
+        pubDate={post && post.pubDate}
         isArticle
       >
         <ArticleContent data={post} isLoading={isLoading} />
