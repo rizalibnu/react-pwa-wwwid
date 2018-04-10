@@ -9,7 +9,7 @@ import SidebarContent from '../SidebarContent';
 import { host } from '../../utils/helpers';
 
 type Props = {
-  children: any,
+  children?: React.Node,
   classes: Object,
   title: string,
   description: string,
@@ -130,9 +130,8 @@ class BaseLayout extends React.PureComponent<Props, State> {
     this.setState({ sidebarOpen: !newState });
   }
 
-  menuButtonClick = (ev) => {
-    ev.preventDefault();
-    this.onSetSidebarOpen(!this.state.open);
+  menuButtonClick = () => {
+    this.onSetSidebarOpen(!this.state.sidebarOpen);
   }
 
   render() {

@@ -32,7 +32,7 @@ class ArticleContainer extends React.PureComponent<Props> {
 
     return (
       <BaseLayout
-        title={`React PWA WWWID - ${post && post.title}`}
+        title={`React PWA WWWID - ${post ? post.title : ''}`}
         description={post && post.excerpt}
         canonical={`${host}/articles/${slug}`}
         image={post && post.thumbnail}

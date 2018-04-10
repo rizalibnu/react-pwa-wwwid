@@ -32,7 +32,11 @@ const ReactApp = () => (
   </ThemeProvider>
 );
 
-ReactDOM.render(<ReactApp />, rootElement);
+if (rootElement == null) {
+  throw new Error('no rootElement');
+} else {
+  ReactDOM.render(<ReactApp />, rootElement);
+}
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
