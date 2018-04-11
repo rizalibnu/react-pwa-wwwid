@@ -5,10 +5,20 @@ import injectSheet from 'react-jss';
 import Routes from './Routes';
 import styles from '../globalStyles';
 
-const App = () => (
-  <div className="App">
-    <Routes />
-  </div>
-);
+class App extends React.Component {
+  componentDidMount() {
+    window.onload = () => {
+      document.getElementById('startingLoader').remove();
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Routes />
+      </div>
+    );
+  }
+}
 
 export default injectSheet(styles)(App);
