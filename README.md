@@ -7,14 +7,14 @@ Live Preview : https://react-pwa-id.firebaseapp.com/
 
 <img src="assets/screenshot-score.png" />
 
-See webpagetest.org performance test in 4/10/2018, 10:17:24 PM [Click here](https://www.webpagetest.org/result/180410_5N_f2e24e8d09510aadd1096c64c1a655c8/)
+See webpagetest.org performance test in 4/16/2018, 4:23:51 PM [Click here](https://www.webpagetest.org/result/180416_BK_c2aafe31c07fde3718500ec0d3216b32/)
 
 <br>
 <br>
 
 <img src="assets/screenshot-lighthouse.png" />
 
-See webpagetest.org lighthouse score in 4/10/2018, 10:17:24 PM [Click here](https://www.webpagetest.org/result/180410_G3_c8a32415f117b6aee0788703e28e7e32/)
+See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here](https://www.webpagetest.org/result/180416_39_e39579c3455fb9d0a4f8b361340d3a8b/)
 
 ## Features
 - [x] PWA - Progressive Web Application
