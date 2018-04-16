@@ -13,7 +13,35 @@
       }
     ],
     "headers": [
-      {"source": "/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}
-    ]
+      {
+        "source": "/service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source" : "**/*.@(eot|otf|ttf|ttc|woff)",
+        "headers" : [
+          {
+            "key" : "Access-Control-Allow-Origin",
+            "value" : "max-age=2628000"
+          }
+        ]
+      },
+      {
+        "source" : "**/*.@(css|jpg|jpeg|png|gif|js|ico)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=2628000"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }
