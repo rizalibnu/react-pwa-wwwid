@@ -1,6 +1,6 @@
 {
   "name": "React PWA WWWID",
-  "short_name": "RCPWAWWWID",
+  "short_name": "REACT WWWID",
   "icons": [
       {
         "src": "favicon.ico",
@@ -18,7 +18,7 @@
           "type": "image/png"
       }
   ],
-  "start_url": "./index.html",
+  "start_url": "/",
   "theme_color": "#171717",
   "background_color": "#171717",
   "display": "standalone",
