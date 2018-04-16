@@ -3,8 +3,6 @@ import * as React from 'react';
 import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
 import { Lazy } from 'react-lazy';
-import Moment from 'moment';
-import 'moment/locale/id';
 
 type Props = {
   classes: Object,
@@ -85,8 +83,6 @@ class ArticleList extends React.PureComponent<Props, State> {
     const { classes, data, isLoading } = this.props;
     const placeholderItems = Array.from(Array(3).keys());
 
-    Moment.locale('id');
-
     if (isLoading) {
       return (
         <div className={classes.wrapper}>
@@ -141,7 +137,7 @@ class ArticleList extends React.PureComponent<Props, State> {
                 </span>
                 <span> · </span>
                 <span>
-                  {Moment(Moment(post.pubDate).format('YYYYMMDD'), 'YYYYMMDD').fromNow()}
+                  {(new Date(post.pubDate)).toLocaleDateString()}
                 </span>
               </div>
             </div>
