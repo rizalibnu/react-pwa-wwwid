@@ -22,7 +22,8 @@
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-promise-middleware": "^5.0.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webpack-bundle-analyzer": "^2.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,7 +32,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "eslint": "node node_modules/.bin/eslint"
+    "eslint": "node node_modules/.bin/eslint",
+    "analyze": "node analyzer.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
