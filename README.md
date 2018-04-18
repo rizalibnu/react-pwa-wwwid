@@ -14,7 +14,7 @@ See webpagetest.org performance test in 4/16/2018, 4:23:51 PM [Click here](https
 
 <img src="assets/screenshot-lighthouse.png" />
 
-See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here](https://www.webpagetest.org/result/180416_39_e39579c3455fb9d0a4f8b361340d3a8b/)
+See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here](https://www.webpagetest.org/result/180418_VB_1859723cfb49355a9511dbe942b81b64/)
 
 ## Features
 - [x] PWA - Progressive Web Application
@@ -25,6 +25,7 @@ See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here]
 - [x] Lazy Loading Image
 - [x] SEO - Search Engine Optimizations
 - [x] Image optimizations and WebP Support using Cloudinary
+- [x] Webpack Bundle Analyzer
 - [ ] Server Side Rendering/Prerender
 - [ ] Push Notification
 - [ ] Content Folding
