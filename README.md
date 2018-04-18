@@ -31,6 +31,9 @@ See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here]
 - [ ] Content Folding
 - [ ] Optimize First Meaningful Paint Performance
 
+## Medium Article
+https://medium.com/@rizalibnu/optimasi-load-progressive-web-application-pwa-dengan-react-js-kurang-dari-5-detik-dalam-koneksi-9c33980b68c0
+
 ## Challenge Information
 https://medium.com/wwwid/tantangan-web-developer-untuk-membuat-aplikasi-web-bisa-digunakan-kurang-dari-5-detik-70bb7431741d
 
