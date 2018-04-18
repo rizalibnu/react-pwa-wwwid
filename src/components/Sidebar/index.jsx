@@ -95,14 +95,13 @@ class Sidebar extends React.Component<Props> {
     onSetOpen: () => {},
     styles: {},
     defaultSidebarWidth: 0,
+    rootClassName: '',
+    sidebarClassName: '',
+    contentClassName: '',
+    overlayClassName: '',
   }
 
-  constructor(props: Props) {
-    super(props);
-    this.overlayClicked = this.overlayClicked.bind(this);
-  }
-
-  overlayClicked() {
+  overlayClicked = () => {
     if (this.props.open) {
       this.props.onSetOpen(false);
     }

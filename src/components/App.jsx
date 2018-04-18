@@ -5,10 +5,15 @@ import injectSheet from 'react-jss';
 import Routes from './Routes';
 import styles from '../globalStyles';
 
-class App extends React.Component {
+type Props = {};
+
+class App extends React.Component<Props> {
   componentDidMount() {
+    const elem = document.getElementById('startingLoader');
     window.onload = () => {
-      document.getElementById('startingLoader').remove();
+      if (elem) {
+        elem.remove();
+      }
     };
   }
 
