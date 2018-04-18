@@ -1,30 +1,28 @@
 // @flow
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import loadable from 'loadable-components';
+import Loadable from 'react-loadable';
 
 const Loading = () => null;
 
-const HasErrored = () => <div>Error...</div>;
-
-export const Home = loadable(() => import('../containers/HomeContainer'), {
-  LoadingComponent: Loading,
-  ErrorComponent: HasErrored,
+const Home = Loadable({
+  loader: () => import('../containers/HomeContainer'),
+  loading: Loading,
 });
 
-export const Article = loadable(() => import('../containers/ArticleContainer'), {
-  LoadingComponent: Loading,
-  ErrorComponent: HasErrored,
+const Article = Loadable({
+  loader: () => import('../containers/ArticleContainer'),
+  loading: Loading,
 });
 
-export const Category = loadable(() => import('../containers/CategoryContainer'), {
-  LoadingComponent: Loading,
-  ErrorComponent: HasErrored,
+const Category = Loadable({
+  loader: () => import('../containers/CategoryContainer'),
+  loading: Loading,
 });
 
-export const NotFound = loadable(() => import('../containers/NotFoundContainer'), {
-  LoadingComponent: Loading,
-  ErrorComponent: HasErrored,
+const NotFound = Loadable({
+  loader: () => import('../containers/NotFoundContainer'),
+  loading: Loading,
 });
 
 const Routes = () => (

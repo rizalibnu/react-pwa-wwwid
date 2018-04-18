@@ -4755,13 +4755,6 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
-loadable-components@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/loadable-components/-/loadable-components-1.3.0.tgz#232edc7432488d5d45a6c02baa7880d2047ec78b"
-  dependencies:
-    babel-plugin-syntax-dynamic-import "^6.18.0"
-    hoist-non-react-statics "^2.5.0"
-
 loader-fs-cache@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.1.tgz#56e0bf08bd9708b26a765b68509840c8dec9fdbc"
@@ -5991,7 +5984,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -6193,6 +6186,16 @@ react-jss@^8.4.0:
 react-lazy@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/react-lazy/-/react-lazy-0.5.1.tgz#418f7684af86dded7c127ec49d5d8b22f6d2fe4e"
+
+react-loadable-visibility@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/react-loadable-visibility/-/react-loadable-visibility-2.4.2.tgz#c83daf9a5abb41248bc20f60a3c5cbbbeef901ce"
+
+react-loadable@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/react-loadable/-/react-loadable-5.3.1.tgz#9699e9a08fed49bacd69caaa282034b62a76bcdd"
+  dependencies:
+    prop-types "^15.5.0"
 
 react-redux@^5.0.7:
   version "5.0.7"
