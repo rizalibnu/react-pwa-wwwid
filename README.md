@@ -26,6 +26,7 @@ See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here]
 - [x] SEO - Search Engine Optimizations
 - [x] Image optimizations and WebP Support using Cloudinary
 - [x] Webpack Bundle Analyzer
+- [ ] Web Share API
 - [ ] Server Side Rendering/Prerender
 - [ ] Push Notification
 - [ ] Content Folding
