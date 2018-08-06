@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    image: rizalibnu/react-pwa-id
+    container_name: react-pwa-id
+    environment:
+       VIRTUAL_HOST: react-pwa-id.rizalibnu.com
+       LETSENCRYPT_HOST: react-pwa-id.rizalibnu.com
+       LETSENCRYPT_EMAIL: hello@rizalibnu.com
+    restart: always
+    expose:
+       - 80
+
+networks:
+  default:
+    external:
+      name: webproxy
