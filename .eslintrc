@@ -13,7 +13,8 @@
     "React": true,
     "fetch": false,
     "localStorage": true,
-    "navigator": true
+    "navigator": true,
+    "createImageBitmap": true
   },
   "rules": {
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],

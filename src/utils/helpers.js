@@ -59,9 +59,39 @@ export const getAllCategories = (params) => {
   return objects;
 };
 
+export const WebpIsSupported = (callback) => {
+  // If the browser doesn't has the method createImageBitmap, you can't display webp format
+  if (!window.createImageBitmap) {
+    callback(false);
+    return;
+  }
+
+  // Base64 representation of a white point image
+  const webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+
+  // Retrieve the Image in Blob Format
+  fetch(webpdata).then(response => response.blob()).then((blob) => {
+    // If the createImageBitmap method succeeds, return true, otherwise false
+    createImageBitmap(blob).then(() => {
+      callback(true);
+    }, () => {
+      callback(false);
+    });
+  });
+};
+
 export const getCloudinaryImage = (img) => {
-  let widthSize;
+  let widthSize = 0;
   let heightSize;
+  let imageType;
+
+  WebpIsSupported((isSupported) => {
+    if (isSupported) {
+      imageType = 'webp';
+    } else {
+      imageType = 'jpg';
+    }
+  });
 
   if (window.screen.width >= 860) {
     widthSize = 332;
@@ -74,7 +104,7 @@ export const getCloudinaryImage = (img) => {
     heightSize = 54;
   }
 
-  const fetchUrl = `https://res.cloudinary.com/rizalibnu/image/fetch/c_fill,g_auto:face,h_${heightSize},w_${widthSize},fl_force_strip.progressive/f_webp/`;
+  const fetchUrl = `https://res.cloudinary.com/rizalibnu/image/fetch/c_fill,g_auto:face,h_${heightSize},w_${widthSize},fl_force_strip.progressive/f_${imageType}/`;
 
   return fetchUrl + img;
 };
