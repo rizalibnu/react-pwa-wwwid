@@ -27,10 +27,11 @@ See webpagetest.org lighthouse score in Aug 7, 2018, 7:35 AM GMT+7 [Click here](
 - [x] Image optimizations and WebP Support using Cloudinary
 - [x] Webpack Bundle Analyzer
 - [ ] Web Share API
-- [ ] Server Side Rendering/Prerender
 - [ ] Push Notification
 - [ ] Content Folding
-- [ ] Optimize First Meaningful Paint Performance
+- [x] Gzip Compression with Nginx (Include in Dockerfile)
+- [x] Prerender Support with Nginx Middleware (Include in Dockerfile)
+- [x] Cache Control with Nginx (Include in Dockerfile)
 
 ## Medium Article
 https://medium.com/@rizalibnu/optimasi-load-progressive-web-application-pwa-dengan-react-js-kurang-dari-5-detik-dalam-koneksi-9c33980b68c0
