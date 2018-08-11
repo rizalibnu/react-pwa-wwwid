@@ -14,7 +14,7 @@ See webpagetest.org performance test in 4/16/2018, 4:23:51 PM [Click here](https
 
 <img src="assets/screenshot-lighthouse.png" />
 
-See webpagetest.org lighthouse score in Apr 16, 2018, 4:19 PM GMT+7 [Click here](https://www.webpagetest.org/result/180418_VB_1859723cfb49355a9511dbe942b81b64/)
+See webpagetest.org lighthouse score in Aug 7, 2018, 7:35 AM GMT+7 [Click here](https://www.webpagetest.org/result/180807_ZA_820339d4ec6019b971718910304f3d19/)
 
 ## Features
 - [x] PWA - Progressive Web Application
