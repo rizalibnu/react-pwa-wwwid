@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 
 type Props = {
   location: Object,
-  children?: React.Node,
+  children: React.Node
 };
 
 class ScrollToTop extends React.PureComponent<Props> {

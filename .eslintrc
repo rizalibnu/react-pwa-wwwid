@@ -23,6 +23,7 @@
     "max-len": 0,
     "no-console": 0,
     "object-curly-newline": 0,
-    "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ]
+    "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
+    "react/destructuring-assignment": 0
   }
 }
