@@ -83,13 +83,11 @@ export const WebpIsSupported = (callback) => {
 export const getCloudinaryImage = (img) => {
   let widthSize = 0;
   let heightSize;
-  let imageType;
+  let imageType = 'jpg';
 
   WebpIsSupported((isSupported) => {
     if (isSupported) {
       imageType = 'webp';
-    } else {
-      imageType = 'jpg';
     }
   });
 
