@@ -7,7 +7,7 @@ const Api = axios.create({
   },
 });
 
-const url = '/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fwwwid';
+const url = '/v1/api.json?rss_url=https%3A%2F%2Fwwwid.org%2Findex.xml';
 
 export function fetchFeedHasErrored(bool) {
   return {
