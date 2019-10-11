@@ -109,8 +109,8 @@ class ArticleList extends React.PureComponent<Props, State> {
 
     const item = (
       <React.Fragment>
-        {data.map(post => (
-          <div key={post.id} className={classes.item}>
+        {data.map((post, key) => (
+          <div key={key.toString()} className={classes.item}>
             <div className={classes.imageWrapper}>
               <Link to={`/articles/${post.slug}`}>
                 <Lazy ltIE9 className={classes.image}>
