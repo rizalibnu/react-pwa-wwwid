@@ -24,7 +24,7 @@
     "recompose": "^0.30.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.6",
-    "redux-promise-middleware": "^5.1.1",
+    "redux-promise-middleware": "^6.1.2",
     "redux-thunk": "^2.3.0",
     "webpack-bundle-analyzer": "^3.0.3"
   },
