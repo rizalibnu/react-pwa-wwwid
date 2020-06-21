@@ -11,7 +11,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-hot-loader": "^4.3.12",
+    "react-hot-loader": "^4.12.21",
     "react-html-parser": "^2.0.2",
     "react-jss": "^8.6.1",
     "react-lazy": "^1.0.3",
